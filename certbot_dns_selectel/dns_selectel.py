@@ -92,26 +92,28 @@ class _SelectelDNSClient(object):
     def _find_domain_id(self, domain):
         try:
             # Getting domains info
-            api_response = self.domains.get_domains()
+            api_response = self.domains.get_domain_by_name(domain)
         except ApiException as e:
             print("Exception when calling DomainsApi->get_domains: %s\n" % e)
 
         # Search for most suitable domain_zone
         result = None
-        match_len = 0
-        for domain_zone in api_response:
-            # Domain and zone the same
-            if domain == domain_zone.name:
-                result = domain_zone
-                break
+        if api_response["id"]:
+            result = api_response
+        # match_len = 0
+        # for domain_zone in api_response:
+        #     # Domain and zone the same
+        #     if domain == domain_zone.name:
+        #         result = domain_zone
+        #         break
             # Search subdomain domain in domain_zone
-            res = re.search("{}$".format(domain_zone.name), domain)
-            if res:
-                current_match_len = res.span()[1] - res.span()[0]
-                # More specific zone found
-                if current_match_len > match_len:
-                    result = domain_zone
-                    match_len = current_match_len
+            # res = re.search("{}$".format(domain_zone.name), domain)
+            # if res:
+            #     current_match_len = res.span()[1] - res.span()[0]
+            #     # More specific zone found
+            #     if current_match_len > match_len:
+            #         result = domain_zone
+            #         match_len = current_match_len
 
         # Domain zone not found
         if not result:

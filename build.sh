@@ -35,6 +35,6 @@ WORK_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
 CERTBOT_VERSION="$1"
 
-Build "shm013/certbot-dns-selectel" "$CERTBOT_VERSION" "$WORK_DIR"
+Build "shm013/certbot-dns-selectel-v2" "$CERTBOT_VERSION" "$WORK_DIR"
 
 Cleanup

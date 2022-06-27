@@ -1,5 +1,5 @@
-Selectel DNS Authenticator plugin for Certbot
-==============================================
+# Selectel DNS Authenticator plugin for Certbot
+
 A certbot dns plugin to obtain certificates using Selectel DNS.
 
 ## Obtain DNS API key
@@ -8,7 +8,7 @@ https://my.selectel.ru/profile/apikeys
 
 ## Install
 
-pip install certbot-dns-selectel
+pip install certbot-dns-selectel-v2
 
 ## Credentials File
 
@@ -23,9 +23,9 @@ chmod 600 /path/to/credentials.ini
 ## Obtain Certificates
 
 ```bash
-certbot certonly -a certbot-dns-selectel:dns-selectel \
-  --certbot-dns-selectel:dns-selectel-credentials /path/to/credentials.ini \
-  --certbot-dns-selectel:dns-selectel-propagation-seconds 30 \
+certbot certonly -a certbot-dns-selectel-v2:dns-selectel \
+  --certbot-dns-selectel-v2:dns-selectel-credentials /path/to/credentials.ini \
+  --certbot-dns-selectel-v2:dns-selectel-propagation-seconds 30 \
   -d example.com \
   -d "*.example.com" \
   -m admin@example.com \
@@ -37,9 +37,9 @@ certbot certonly -a certbot-dns-selectel:dns-selectel \
 ```bash
 docker run -v /path/to/credentials.ini:/credentials.ini -ti \
   --name example.com.certbot \
-  shm013/certbot-dns-selectel certonly -a certbot-dns-selectel:dns-selectel \
-  --certbot-dns-selectel:dns-selectel-credentials /credentials.ini \
-  --certbot-dns-selectel:dns-selectel-propagation-seconds 30 \
+  shm013/certbot-dns-selectel-v2 certonly -a certbot-dns-selectel-v2:dns-selectel \
+  --certbot-dns-selectel-v2:dns-selectel-credentials /credentials.ini \
+  --certbot-dns-selectel-v2:dns-selectel-propagation-seconds 30 \
   -d example.com \
   -d "*.example.com" \
   -m admin@example.com \

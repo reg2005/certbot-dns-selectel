@@ -34,10 +34,10 @@ docs_extras = [
 ]
 
 setup(
-    name='certbot-dns-selectel',
+    name='certbot-dns-selectel-v2',
     version=version,
     description='Selectel DNS Authenticator plugin for Certbot',
-    url='https://github.com/Shm013/certbot-dns-selectel',
+    url='https://github.com/Shm013/certbot-dns-selectel-v2',
     author='Nikolay Shamanovich',
     author_email='shm013@yandex.ru',
     license='Apache License 2.0',

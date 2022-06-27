@@ -1,9 +1,9 @@
-.. certbot-dns-selectel documentation master file, created by
+.. certbot-dns-selectel-v2 documentation master file, created by
    sphinx-quickstart on Thu Nov  7 15:49:18 2019.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to certbot-dns-selectel's documentation!
+Welcome to certbot-dns-selectel-v2's documentation!
 ================================================
 
 .. toctree::

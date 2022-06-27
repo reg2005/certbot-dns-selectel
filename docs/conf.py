@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'certbot-dns-selectel'
+project = 'certbot-dns-selectel-v2'
 copyright = '2019, Certbot Project'
 author = 'Certbot Project'
 
@@ -101,7 +101,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'certbot-dns-selecteldoc'
+htmlhelp_basename = 'certbot-dns-selectel-v2doc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -128,7 +128,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'certbot-dns-selectel.tex', 'certbot-dns-selectel Documentation',
+    (master_doc, 'certbot-dns-selectel-v2.tex', 'certbot-dns-selectel-v2 Documentation',
      'Certbot Project', 'manual'),
 ]
 
@@ -138,7 +138,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'certbot-dns-selectel', 'certbot-dns-selectel Documentation',
+    (master_doc, 'certbot-dns-selectel-v2', 'certbot-dns-selectel-v2 Documentation',
      [author], 1)
 ]
 
@@ -149,7 +149,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'certbot-dns-selectel', 'certbot-dns-selectel Documentation',
-     author, 'certbot-dns-selectel', 'One line description of project.',
+    (master_doc, 'certbot-dns-selectel-v2', 'certbot-dns-selectel-v2 Documentation',
+     author, 'certbot-dns-selectel-v2', 'One line description of project.',
      'Miscellaneous'),
 ]

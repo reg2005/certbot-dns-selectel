@@ -9,4 +9,4 @@
 
 -e acme
 -e .
--e certbot-dns-selectel[docs]
+-e certbot-dns-selectel-v2[docs]

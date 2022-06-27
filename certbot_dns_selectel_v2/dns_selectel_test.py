@@ -12,7 +12,7 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-"""Tests for certbot_dns_selectel.dns_selectel."""
+"""Tests for certbot_dns_selectel_v2.dns_selectel."""
 
 import unittest
 
@@ -30,7 +30,7 @@ API_KEY = '0000000000000000000000000_000000'
 class AuthenticatorTest(test_util.TempDirTestCase, dns_test_common.BaseAuthenticatorTest):
 
     def setUp(self):
-        from certbot_dns_selectel.dns_selectel import Authenticator
+        from certbot_dns_selectel_v2.dns_selectel import Authenticator
 
         super(AuthenticatorTest, self).setUp()
 
@@ -40,10 +40,10 @@ class AuthenticatorTest(test_util.TempDirTestCase, dns_test_common.BaseAuthentic
             path
         )
 
-        self.config = mock.MagicMock(selectel_credentials=path,
-                                     selectel_propagation_seconds=0)  # don't wait during tests
+        self.config = mock.MagicMock(selectel_v2_credentials=path,
+                                     selectel_v2_propagation_seconds=0)  # don't wait during tests
 
-        self.auth = Authenticator(self.config, "selectel")
+        self.auth = Authenticator(self.config, "selectel_v2")
 
         self.mock_client = mock.MagicMock()
         # _get_selectel_client | pylint: disable=protected-access

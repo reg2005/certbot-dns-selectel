@@ -16,7 +16,7 @@ from setuptools import setup
 from setuptools import find_packages
 
 
-version = '1.1.0'
+version = '1.4.0'
 
 # Remember to update local-oldest-requirements.txt when changing the minimum
 # acme/certbot version.
@@ -73,8 +73,8 @@ setup(
     },
     entry_points={
         'certbot.plugins': [
-            'dns-selectel = certbot_dns_selectel.dns_selectel:Authenticator',
+            'dns-selectel-v2 = certbot_dns_selectel_v2.dns_selectel:Authenticator',
         ],
     },
-    test_suite='certbot_dns_selectel',
+    test_suite='certbot_dns_selectel_v2',
 )

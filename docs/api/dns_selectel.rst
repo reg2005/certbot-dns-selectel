@@ -1,5 +1,5 @@
-:mod:`certbot_dns_selectel.dns_selectel`
+:mod:`certbot_dns_selectel_v2.dns_selectel`
 ----------------------------------------------
 
-.. automodule:: certbot_dns_selectel.dns_selectel
+.. automodule:: certbot_dns_selectel_v2.dns_selectel
    :members:

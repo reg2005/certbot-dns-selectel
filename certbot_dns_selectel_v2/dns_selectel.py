@@ -90,16 +90,17 @@ class _SelectelDNSClient(object):
         self.records = selectel_dns_api.RecordsApi()
 
     def _find_domain_id(self, domain):
+        # Search for most suitable domain_zone
+        result = None
         try:
             # Getting domains info
             api_response = self.domains.get_domain_by_name(domain)
+            result = api_response
         except ApiException as e:
             print("Exception when calling DomainsApi->get_domains: %s\n" % e)
 
-        # Search for most suitable domain_zone
-        result = None
-        if api_response["id"]:
-            result = api_response
+
+
         # match_len = 0
         # for domain_zone in api_response:
         #     # Domain and zone the same
